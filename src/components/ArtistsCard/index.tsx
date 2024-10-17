@@ -11,7 +11,7 @@ export default function ArtistsCard({ artist }: { artist: ArtistsDTO }) {
                 <img
                     src={image.url}
                     alt={artist.name}
-                    className="w-full h-48 object-cover mb-4"
+                    className="w-full h-64 object-fit mb-4"
                 />
             )}
             <h2 className="text-xl font-semibold">{name}</h2>
