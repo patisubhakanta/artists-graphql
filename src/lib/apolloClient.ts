@@ -1,7 +1,11 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+
+console.log(API_BASE_URL)
+
 const client = new ApolloClient({
-  uri: 'https://metaphysics-production.artsy.net/v2',
+  uri: API_BASE_URL,
   cache: new InMemoryCache(),
 });
 
