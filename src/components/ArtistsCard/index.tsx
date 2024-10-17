@@ -2,11 +2,11 @@
 import { ArtistsDTO } from "@/types/Types";
 
 export default function ArtistsCard({ artist }: { artist: ArtistsDTO }) {
- 
-    const { id, name, image, nationality } = artist
+
+    const { name, image, nationality } = artist
 
     return (
-        <div key={id} className="border rounded-lg p-4 shadow-lg">
+        <div className="border rounded-lg p-4 shadow-lg">
             {image?.url && (
                 <img
                     src={image.url}
