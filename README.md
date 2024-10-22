@@ -1,4 +1,4 @@
-### Integrate GraphQL with Next Js SSR
+# Integrate GraphQL with Next Js SSR
 
 ## Features
 
