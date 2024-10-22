@@ -1,6 +1,8 @@
+### Integrate GraphQL with Next Js SSR
+
 ## Features
 
-- Fetches and displays popular artists from a GraphQL API.
+- Fetches and displays popular artists from a GraphQL API .
 - Uses Apollo Client to interact with the GraphQL API.
 - Client-side data fetching and rendering with TailwindCSS for styling.
 - Each artist is clickable, leading to a details page that shows more information about the artist.
