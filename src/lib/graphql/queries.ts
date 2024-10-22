@@ -1,15 +1,35 @@
-import { gql } from "@apollo/client";
+// src/queries.ts
+import { gql } from '@apollo/client';
 
-export const ARTISTS_QUERY = gql`
-  query {
-     highlights {
-      popularArtists(size: 20) {
-        name
-        id
+export const VEHICLE_LIST_ALL_QUERY = gql`
+  query vehicleListAll($size: Int, $page: Int, $search: String) {
+    vehicleList(size: $size, page: $page, search: $search) {
+      id
+      naming {
+        make
+        model
+        version
+        edition
+        chargetrip_version
+      }
+      connectors {
+        standard
+      }
+      media {
         image {
-           url
+          id
+          type
+          thumbnail_url
+          thumbnail_height
+          thumbnail_width
         }
-        nationality 
+        brand {
+          id
+          type
+          thumbnail_url
+          thumbnail_height
+          thumbnail_width
+        }
       }
     }
   }
