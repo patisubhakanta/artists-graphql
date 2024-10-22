@@ -1,15 +1,60 @@
 import { gql } from "@apollo/client";
 
-export const ARTISTS_QUERY = gql`
+export const GET_PRODUCTS = gql`
   query {
-     highlights {
-      popularArtists(size: 20) {
-        name
-        id
-        image {
-           url
+    products(first: 30, channel: "default-channel") {
+      edges {
+        node {
+          id
+          name
+          description
+          pricing {
+            priceRange {
+              start {
+                gross {
+                  amount
+                  currency
+                }
+              }
+              stop {
+                gross {
+                  amount
+                  currency
+                }
+              }
+            }
+          }
+          thumbnail {
+            url
+            alt
+          }
         }
-        nationality 
+      }
+    }
+  }
+`;
+
+export const GET_PRODUCT = gql`
+  query GetProduct($id: ID!) {
+    product(id: $id, channel: "default-channel") {
+      id
+      name
+      description
+      images {
+        url
+      }
+      category {
+        name
+      }
+      pricing {
+        priceRange {
+          start {
+            gross {
+              amount
+              currency
+            }
+          }
+        }
       }
     }
   }
