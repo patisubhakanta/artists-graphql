@@ -1,5 +1,5 @@
 # Integrate Saleor API with Next.js SSR
-- Uses the Saleor API and Next.js SSR to display a product listing page, and clicking on a product leads to its details page.
+- This project uses the Saleor API and Next.js SSR to display a product listing page, with search functionality to filter products by name. Users can click on a product to navigate to its details page.
 
   
 ## Features

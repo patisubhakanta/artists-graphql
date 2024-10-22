@@ -28,4 +28,7 @@ export interface Price {
     };
     thumbnail: Thumbnail;
   }
-  
+// Type for Product Page
+  export interface SearchParams {
+    search?: string; 
+  } 

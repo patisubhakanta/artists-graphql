@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 export const GET_PRODUCTS = gql`
-  query {
-    products(first: 30, channel: "default-channel") {
+  query GetProducts($search: String) {
+    products(first: 30, channel: "default-channel", filter: { search: $search }) {
       edges {
         node {
           id
