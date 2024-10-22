@@ -1,11 +1,15 @@
-# Integrate GraphQL with Next Js SSR
+# Integrate Saleor API with Next.js SSR
+- Uses the Saleor API and Next.js SSR to display a product listing page, and clicking on a product leads to its details page.
 
+  
 ## Features
 
-- Fetches and displays popular artists from a GraphQL API.
+- Fetches and displays products from a GraphQL API using the Saleor API.
 - Uses Apollo Client to interact with the GraphQL API.
-- Server-side data fetching and rendering with TailwindCSS for styling.
-- Each artist is clickable, leading to a details page that shows more information about the artist.
+- Server-side data fetching and rendering for two pages:
+    - Product Listing Page: Displays a list of products.
+    - Product Details Page: Shows detailed information about a selected product.
+- Styled using TailwindCSS for a responsive and modern design.
 
 
 ## Technologies Used
@@ -13,6 +17,7 @@
 - Next.js: React framework for server-rendered or statically exported React apps.
 - Apollo Client: A comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL.
 - GraphQL: A query language for your API, allowing you to request only the data you need.
+- Saleor API: A powerful GraphQL API for eCommerce that provides product, category, and order management.
 - TailwindCSS: A utility-first CSS framework for rapid UI development.
 - TypeScript: Provides static typing for better development experience and code quality.
 
@@ -20,7 +25,8 @@
 
 First, run the development server:
 
-- Add .env.local file (Graphql API) as per .env.sample
+- Clone the repository
+- Add .env.local file (Saleor API) as per .env.sample
 
 ```bash
 
