@@ -1,16 +1,15 @@
-"use client";
-import { useQuery } from "@apollo/client";
+
 import { ARTISTS_QUERY } from "@/lib/graphql/queries";
-import ArtistsLoading from "@/components/ArtistsLoading";
+
 import { ArtistsDTO } from "@/types/Types";
 import ArtistsCard from "@/components/ArtistsCard";
+import client from "@/lib/apolloClient";
 
-export default function Home() {
-  const { loading, error, data } = useQuery(ARTISTS_QUERY);
+export default async function Home() {
+  const { data } = await client.query({
+    query: ARTISTS_QUERY,
+  });
 
-  if (loading) return (<ArtistsLoading />);
-
-  if (error) return <p className="text-center text-red-500">Error: {error.message}</p>;
 
   return (
     <>
