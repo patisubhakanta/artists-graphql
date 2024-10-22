@@ -16,12 +16,6 @@ export const GET_PRODUCTS = gql`
                   currency
                 }
               }
-              stop {
-                gross {
-                  amount
-                  currency
-                }
-              }
             }
           }
           thumbnail {

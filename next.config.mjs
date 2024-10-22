@@ -1,6 +1,6 @@
 const nextConfig = {
     images: {
-        domains: ["cdn.dummyjson.com", "store-q9quebnc.saleor.cloud"],
+        domains: ["cdn.dummyjson.com", "store-gtxr6sqs.saleor.cloud"],
     },
 };
 

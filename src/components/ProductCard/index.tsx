@@ -1,6 +1,8 @@
+import { ProductDTO } from "@/types/Types";
 import { descriptionFormatter, formatPrice } from "@/utils/commomUtils";
+import Image from "next/image";
 
-export default function ProductCard({ product }: { product: any }) {
+export default function ProductCard({ product }: { product: ProductDTO }) {
   const { name, thumbnail, description, pricing } = product;
   const { amount, currency } = pricing.priceRange.start.gross
 
@@ -8,10 +10,11 @@ export default function ProductCard({ product }: { product: any }) {
     <div className="border rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 max-w-xs h-full flex flex-col">
       {thumbnail && (
         <div className="w-full h-64 mb-4">
-          <img
+          <Image
             src={thumbnail.url}
-            alt={name}
-            className="w-full h-full object-cover rounded-lg"
+            alt={thumbnail.alt}
+            width={256}
+            height={256}
           />
         </div>
       )}

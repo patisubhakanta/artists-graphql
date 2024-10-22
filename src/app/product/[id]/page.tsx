@@ -2,7 +2,6 @@ import client from "@/lib/apolloClient";
 import { GET_PRODUCT } from "@/lib/graphql/queries";
 import { descriptionFormatter, formatPrice } from "@/utils/commomUtils";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 const ProductDetails = async ({ params }: { params: { id: string } }) => {
     const id: string = params.id;
