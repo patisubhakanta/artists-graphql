@@ -38,4 +38,4 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-API Used : ```https://metaphysics-production.artsy.net/v2```
+API Used : ```https://store-***r6***.saleor.cloud/graphql/```
